@@ -33,31 +33,19 @@
     </header>
 
 <body>
-  <!-- 見出し -->
-  <h1 class="mt-4">大阪万博<img class="myaku" src="https://image.itmedia.co.jp/nl/articles/2207/18/l_myakumyaku_banpaku_01.jpg" alt=""></h1>
 
-  <!-- 本文 -->
-  
-  <div class="d-flex align-items-start justify-content-center mt-5">
-    <div>
-      <h2>Q.大阪万博とは</h2>
-      <p>
-        大阪市此花区の夢洲で開催される国際博覧会です。​<br>
-        テーマは「いのち輝く未来社会のデザイン」で、様々な最先端技術やアイデアが集結し、<br>
-        未来社会を体験できる場となることが期待されています。
-      </p>
-    </div>
-      <img id="top" src="https://hips.hearstapps.com/hmg-prod/images/1-67f7a4c83b921.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="">
-  </div>
+  <!-- ロード画面 -->
+<div class="loader">
+  <p class="loading-text">
+    ロード中
+    <span class="dot dot1">.</span>
+    <span class="dot dot2">.</span>
+    <span class="dot dot3">.</span>
+  </p>
+</div>
 
-    <img class="d-block mx-auto mt-5" src="photo/table.png" alt="">
 
-  
-
-  <!-- bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-</body>
-
+<!-- CSS -->
 <style>
   h1 {
       font-family: "Yuji Syuku", serif;
@@ -78,11 +66,94 @@
     margin-bottom: 12px;
   }
 
-  #top {
-    width: 30%;
-    height: auto;
-    max-height: 300px;
-    max-width: 300px;
+  /* ロードアニメーション */
+  .loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+.loading-text {
+  font-size: 40px;
+  color: rgb(30, 50, 93);
+  display: flex;
+  align-items: flex-end;
+}
+
+.dot {
+  display: inline-block;
+  font-size: 40px;
+  margin-left: 4px;
+  animation: bounce 1.2s infinite;
+}
+
+.dot1 {
+  animation-delay: 0s;
+}
+.dot2 {
+  animation-delay: 0.2s;
+}
+.dot3 {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
   }
+  40% {
+    transform: translateY(-12px);
+  }
+}
 </style>
+
+<!-- javascript -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelector('.loader').style.opacity = '0';
+      setTimeout(() => {
+        document.querySelector('.loader').style.display = 'none';
+      }, 250); // フェードアウト
+    }, 1000); // ロード
+  });
+</script>
+
+<!-- HTML -->
+
+  <!-- 見出し -->
+  <h1 class="mt-2">大阪万博<img class="myaku" src="https://image.itmedia.co.jp/nl/articles/2207/18/l_myakumyaku_banpaku_01.jpg" alt="" style="width: 70px; max-width: 300px; height: auto;"></h1>
+
+  <!-- 本文 -->
+  <div class="d-flex align-items-start justify-content-center mt-5">
+    <div>
+      <h2>Q.大阪万博とは</h2>
+      <p>
+        大阪市此花区の夢洲で開催される国際博覧会です。​<br>
+        テーマは「いのち輝く未来社会のデザイン」で、様々な最先端技術やアイデアが集結し、<br>
+        未来社会を体験できる場となることが期待されています。
+      </p>
+    </div>
+      <img id="top" src="https://hips.hearstapps.com/hmg-prod/images/1-67f7a4c83b921.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="" style="width: 30%; max-width: 300px; height: auto;">
+  </div>
+
+  <img class="d-block mx-auto mt-5" src="photo/table.png" alt="">
+
+  
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+
+
 </html>
