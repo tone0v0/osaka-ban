@@ -11,8 +11,8 @@
     
         <!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
     </head>
 
     <header>
@@ -33,6 +33,79 @@
     </header>
   
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <!-- 見出し -->
+  <h1 class="mt-2">国内パビリオン<img class="myaku" src="https://image.itmedia.co.jp/nl/articles/2207/18/l_myakumyaku_banpaku_01.jpg" alt=""></h1>
+
+  <!-- 本文 -->
+  <div class="d-flex align-items-start justify-content-center">
+  <div>  
+    <h2>Q. 国内パビリオンとは？</h2>
+    <p>
+      日本の民間企業、政府や地方自治体がそれぞれのテーマを表したパビリオンが存在しています。<br>
+      最先端技術や地域文化など日本の魅力を国内外に発信することが目的です。
+    </p>
+  </div>
+    <img class ="img"src="https://www.expo2025.or.jp/wp/wp-content/uploads/20240516Nihonkan_sasikae-e1715837199954.png" alt="パビリオン外観イメージ">
+  </div>
+
+  <div class="d-flex align-items-start justify-content-center">
+  <p class="h1">ーー人気なパビリオンーー</p>
+  </div>
+  <div class="d-flex align-items-start justify-content-center">
+  <div style="padding-right: 40px;">  
+    <h2>大阪ヘルスケアパビリオン（Reborn）</h2>
+    <p>
+       地元大阪がREBORNをテーマに、未来に実現を目指すヘルスケアや都市生活の体験や、<br>
+      iPS細胞をテーマにした再生医療の可能性の発信、屋外ステージでのイベントやなど<br>
+      さまざまな情報を発信。
+    </p>
+  </div>
+    <img class="img" src="https://www.expo2025.or.jp/wp/wp-content/uploads/20250228_healthcare_gaikan_1.jpg" alt="パビリオン外観イメージ">
+  </div>
+
+
+   <div class="d-flex align-items-start justify-content-center">
+    <p class="h1">ーーグッズ&ショップーー</p>
+  </div>
+          <div class="d-flex align-items-start justify-content-center">
+  <div style="padding-right: 10px;">  
+    <h2>日本の企業とコラボ商品</h2>
+    <p>
+       万博公式キャラクター・ミャクミャク様をモチーフにした限定アイテムが大人気！<br>
+          オンラインでゲットできる商品はもちろん、現地でしか手に入らないレアグッズも多数ラインナップ。
+    </p>
+  </div>
+    <img class="img" src="https://expo2025shop.jp/client_info/DNP_EXPO2025SHOP/itemimage/T9120002056292/4582164044091-1.jpg" alt="パビリオン外観イメージ">
+  </div>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
 </body>
+ 
+<style>
+  /* 共有ｃｓｓ */
+  h1 {
+      font-family: "Yuji Syuku", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 45px;
+      text-align: center;
+  }
+ 
+    h2 {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  .myaku{
+    width: 60px;
+    height: auto;
+    margin-bottom: 12px;
+  }
+  .img{
+  width: 400px;
+  height: 250px; /* 統一したい高さに調整 */
+  object-fit: cover; /* 画像を枠に収めて切り取る */
+  border-radius: 8px; /* 任意：角丸なども可能 */
+  }
+</style>
 </html>
